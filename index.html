@@ -16,6 +16,15 @@
             color: #22332c;
             line-height: 1.7;
         }
+        /* 公告栏 */
+        .notice {
+            background: #e8f1ee;
+            color: #104b3b;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 15px;
+            overflow: hidden;
+        }
         nav {
             background: #104b3b;
             padding: 15px 0;
@@ -78,6 +87,7 @@
             border-radius: 14px;
             box-shadow: 0 4px 15px rgba(16,75,59,0.08);
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         .card:hover {
             transform: translateY(-6px);
@@ -113,13 +123,36 @@
             background: #fff;
             margin-top: 40px;
         }
+        /* 返回顶部 */
+        #backTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: #104b3b;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+        }
         @media (max-width:768px){
             .nav-menu {display: none;}
             .banner h1 {font-size: 26px;}
+            #backTop {bottom: 20px; right: 20px;}
         }
     </style>
 </head>
 <body>
+<!-- 公告栏 -->
+<div class="notice">
+    公告：全网职场AI工具 & 精选提示词持续更新，添加微信即可领取全套资源
+</div>
+
 <nav>
     <div class="nav-container">
         <div class="logo">💼 卡卡同行</div>
@@ -138,27 +171,27 @@
 <div class="container">
     <h2 class="title-line">热门AI工具分类</h2>
     <div class="grid">
-        <div class="card">
+        <div class="card" onclick="location.href='tools.html'">
             <h3>📝 职场文案写作</h3>
             <p>工作总结、周报月报、述职报告、商务邮件、朋友圈文案自动生成</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='tools.html'">
             <h3>📊 数据表格分析</h3>
             <p>Excel公式、数据整理、图表解读、业务分析文案一键生成</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='tools.html'">
             <h3>🧠 思维导图生成</h3>
             <p>工作计划、学习大纲、活动流程，输入文字自动生成导图</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='prompt.html'">
             <h3>📄 长文内容总结</h3>
             <p>文章、报告、会议纪要、PDF长文快速提炼核心要点</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='prompt.html'">
             <h3>🎙️ 语音转文字整理</h3>
             <p>会议录音、访谈语音一键转文稿，自动排版整理</p>
         </div>
-        <div class="card">
+        <div class="card" onclick="location.href='prompt.html'">
             <h3>💡 高质量提示词</h3>
             <p>职场专用AI提示词模板，直接复制就能用，效果翻倍</p>
         </div>
@@ -167,8 +200,28 @@
         <p>🔥 领取全套职场AI工具包 + 精选提示词手册<br>添加微信：<b>smilekaka20</b> 备注：AI工具</p>
     </div>
 </div>
+
 <footer>
     卡卡同行 © 2026  All Rights Reserved | 专注职场AI效率工具分享
 </footer>
+
+<!-- 返回顶部按钮 -->
+<div id="backTop">↑</div>
+
+<script>
+// 返回顶部
+let backTop = document.getElementById('backTop');
+window.onscroll = function(){
+    if(window.scrollY > 300){
+        backTop.style.display = 'block';
+    }else{
+        backTop.style.display = 'none';
+    }
+}
+backTop.onclick = function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
 </body>
 </html>
