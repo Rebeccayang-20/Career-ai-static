@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提示词资源 | 卡卡同行</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f4f7f5;
+            color: #22332c;
+            line-height: 1.7;
+        }
+        nav {
+            background: #104b3b;
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-menu a {
+            color: #d8e8e2;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+        .nav-menu a:hover {
+            color: #fff;
+        }
+        .banner {
+            background: linear-gradient(135deg,#104b3b,#206b58);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .banner h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .title-line {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 35px;
+            color: #104b3b;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(16,75,59,0.08);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(16,75,59,0.18);
+        }
+        .card h3 {
+            font-size: 19px;
+            color: #104b3b;
+            margin-bottom: 12px;
+        }
+        .card p {
+            color: #556b63;
+            font-size: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #6b8b7f;
+            font-size: 14px;
+            background: #fff;
+            margin-top: 60px;
+        }
+        @media (max-width:768px){
+            .nav-menu {display: none;}
+            .banner h1 {font-size: 26px;}
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <div class="logo">💼 卡卡同行</div>
+        <div class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="tools.html">AI工具合集</a>
+            <a href="prompt.html" style="color:#fff;font-weight:bold">提示词资源</a>
+            <a href="about.html">关于我们</a>
+        </div>
+    </div>
+</nav>
+
+<div class="banner">
+    <h1>精选提示词资源</h1>
+    <p>职场专用AI提示词模板，直接复制即用，大幅提升输出效果</p>
+</div>
+
+<div class="container">
+    <h2 class="title-line">提示词分类</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>📝 文案创作提示词</h3>
+            <p>工作总结、述职、周报、公众号、短视频文案专用指令模板</p>
+        </div>
+        <div class="card">
+            <h3>💼 职场办公提示词</h3>
+            <p>会议纪要、邮件撰写、工作安排、跨部门沟通话术模板</p>
+        </div>
+        <div class="card">
+            <h3>📄 简历求职提示词</h3>
+            <p>简历优化、面试问答、自我介绍、求职文案定制指令</p>
+        </div>
+        <div class="card">
+            <h3>🎨 图文生成提示词</h3>
+            <p>海报配图、IP角色、场景背景、漫剧人物画风描述词</p>
+        </div>
+        <div class="card">
+            <h3>🎬 视频漫剧提示词</h3>
+            <p>漫剧脚本、镜头描述、人物台词、情绪场景专用提示词</p>
+        </div>
+        <div class="card">
+            <h3>📚 学习提升提示词</h3>
+            <p>知识拆解、大纲整理、读书笔记、技能学习规划指令</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    卡卡同行 © 2026  All Rights Reserved | 专注职场AI效率工具分享
+</footer>
+</body>
+</html>
