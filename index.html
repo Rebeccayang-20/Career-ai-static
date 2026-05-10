@@ -15,15 +15,14 @@
             background-color: #f4f7f5;
             color: #22332c;
             line-height: 1.7;
+            padding-bottom: 70px;
         }
-        /* 公告栏 */
         .notice {
             background: #e8f1ee;
             color: #104b3b;
             text-align: center;
             padding: 8px 0;
             font-size: 15px;
-            overflow: hidden;
         }
         nav {
             background: #104b3b;
@@ -88,6 +87,9 @@
             box-shadow: 0 4px 15px rgba(16,75,59,0.08);
             transition: all 0.3s ease;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap:15px;
         }
         .card:hover {
             transform: translateY(-6px);
@@ -96,11 +98,24 @@
         .card h3 {
             font-size: 19px;
             color: #104b3b;
-            margin-bottom: 12px;
         }
         .card p {
             color: #556b63;
             font-size: 15px;
+            flex:1;
+        }
+        .btn {
+            background: #104b3b;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #1a6b54;
         }
         .contact-box {
             background: #edf6f3;
@@ -123,10 +138,9 @@
             background: #fff;
             margin-top: 40px;
         }
-        /* 返回顶部 */
         #backTop {
             position: fixed;
-            bottom: 30px;
+            bottom: 90px;
             right: 30px;
             width: 45px;
             height: 45px;
@@ -140,17 +154,30 @@
             display: none;
             z-index: 999;
         }
+        .fixed-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #104b3b;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: bold;
+            z-index: 999;
+        }
         @media (max-width:768px){
             .nav-menu {display: none;}
             .banner h1 {font-size: 26px;}
-            #backTop {bottom: 20px; right: 20px;}
+            #backTop {bottom: 80px; right: 20px;}
         }
     </style>
 </head>
 <body>
-<!-- 公告栏 -->
+
 <div class="notice">
-    公告：全网职场AI工具 & 精选提示词持续更新，添加微信即可领取全套资源
+    🔥 全网职场AI工具 & 精选提示词持续更新，添加微信即可领取全套资源
 </div>
 
 <nav>
@@ -164,59 +191,66 @@
         </div>
     </div>
 </nav>
+
 <div class="banner">
     <h1>卡卡同行 · 职场AI工具库</h1>
     <p>告别低效加班，用AI提升职场效率，文案/报表/总结一键搞定</p>
 </div>
+
 <div class="container">
     <h2 class="title-line">热门AI工具分类</h2>
     <div class="grid">
         <div class="card" onclick="location.href='tools.html'">
             <h3>📝 职场文案写作</h3>
             <p>工作总结、周报月报、述职报告、商务邮件、朋友圈文案自动生成</p>
+            <button class="btn">立即使用</button>
         </div>
         <div class="card" onclick="location.href='tools.html'">
             <h3>📊 数据表格分析</h3>
             <p>Excel公式、数据整理、图表解读、业务分析文案一键生成</p>
+            <button class="btn">立即使用</button>
         </div>
         <div class="card" onclick="location.href='tools.html'">
             <h3>🧠 思维导图生成</h3>
             <p>工作计划、学习大纲、活动流程，输入文字自动生成导图</p>
+            <button class="btn">立即使用</button>
         </div>
         <div class="card" onclick="location.href='prompt.html'">
             <h3>📄 长文内容总结</h3>
             <p>文章、报告、会议纪要、PDF长文快速提炼核心要点</p>
+            <button class="btn">查看提示词</button>
         </div>
         <div class="card" onclick="location.href='prompt.html'">
             <h3>🎙️ 语音转文字整理</h3>
             <p>会议录音、访谈语音一键转文稿，自动排版整理</p>
+            <button class="btn">查看提示词</button>
         </div>
         <div class="card" onclick="location.href='prompt.html'">
             <h3>💡 高质量提示词</h3>
             <p>职场专用AI提示词模板，直接复制就能用，效果翻倍</p>
+            <button class="btn">立即领取</button>
         </div>
     </div>
+
     <div class="contact-box">
         <p>🔥 领取全套职场AI工具包 + 精选提示词手册<br>添加微信：<b>smilekaka20</b> 备注：AI工具</p>
     </div>
 </div>
 
 <footer>
-    卡卡同行 © 2026  All Rights Reserved | 专注职场AI效率工具分享
+    卡卡同行 © 2026 All Rights Reserved | 专注职场AI效率工具分享
 </footer>
 
-<!-- 返回顶部按钮 -->
 <div id="backTop">↑</div>
 
+<div class="fixed-bar">
+    微信：smilekaka20 | 领取全套AI资源
+</div>
+
 <script>
-// 返回顶部
 let backTop = document.getElementById('backTop');
 window.onscroll = function(){
-    if(window.scrollY > 300){
-        backTop.style.display = 'block';
-    }else{
-        backTop.style.display = 'none';
-    }
+    backTop.style.display = window.scrollY > 300 ? 'block' : 'none';
 }
 backTop.onclick = function(){
     window.scrollTo({top:0,behavior:'smooth'});
